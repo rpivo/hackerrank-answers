@@ -22,7 +22,7 @@ const fs = require('fs');
  * all EventEmitters emit the event 'newListener' when new listeners are added and 'removeListener'
  * when existing listeners are removed.
  * 
- * so, process object is an instance of EventEmitter -- it's constantly listening to the current
+ * so, the process object is an instance of EventEmitter -- it's constantly listening to the current
  * Node process.
  * 
  * the process.stdin property returns a stream connected to stdin (fd 0). It is a net.Socket (which
@@ -40,6 +40,9 @@ const fs = require('fs');
  * 
  * The net module provides you with an asynchronous network wrapper. It contains methods for
  * creating both servers and clients (called streams).
+ * 
+ * so, process.stdin property is a net.Socket. The net.Socket connection object is emitted when a
+ * new connection is made. It's a stream of data. 
  * 
  * in "old" streams mode the stdin stream is paused by default, so one must call
  * process.stdin.resume() to read from it. process.stdin.resume() is essentially the way you
