@@ -45,10 +45,21 @@ process.stdin.setEncoding('utf-8');
 let inputString = '';
 let currentLine = 0;
 
+/*
+ * the .on() function call registers a callback for the 'data' event. the callback function will be
+ * invoked when data are available. The callback function takes in the input stream from stdin,
+ * inputStdin, and passes it into the function { inputString += inputStdin; } . inputString is
+ * declared above as { let inputString = ''; } . So, all this is doing is concatenating an old
+ * string with the new string that is streamed in from stdin.
+ */
 process.stdin.on('data', inputStdin => {
   inputString += inputStdin;
 });
 
+/*
+ * if the listening on the stdin stream ends inside the Node process, then this function is called.
+ * Nothing is passed into it.
+ */
 process.stdin.on('end', _ => {
   inputString = inputString.replace(/\s*$/, '')
   .split('\n')
