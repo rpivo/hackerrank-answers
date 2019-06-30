@@ -1,7 +1,20 @@
+/*
+ * ES5 strict mode prevents the use of undeclared variables. All modern browsers support strict
+ * mode except <IE10.
+ */
 'use strict';
 
+/*
+ * the fs module provides an API for interacting with the file system in a manner closely modeled
+ * around standard POSIX functions.
+ */
 const fs = require('fs');
 
+/*
+ * the process object is a global that provides information about, and control over, the current
+ * Node.js process. as a global, it is always available to Node.js applications without using
+ * require().
+ */
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
 
