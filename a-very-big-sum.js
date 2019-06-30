@@ -60,7 +60,7 @@ let currentLine = 0;
 
 /*
  * the .on() function call registers a callback for the 'data' event. the callback function will be
- * invoked when data are available. The callback function takes in the input stream from stdin,
+ * invoked when data is available. The callback function takes in the input stream from stdin,
  * inputStdin, and passes it into the function { inputString += inputStdin; } . inputString is
  * declared above as { let inputString = ''; } . So, all this is doing is concatenating an old
  * string with the new string that is streamed in from stdin.
@@ -72,6 +72,23 @@ process.stdin.on('data', inputStdin => {
 /*
  * if the listening on the stdin stream ends inside the Node process, then this function is called.
  * Nothing is passed into it.
+ * 
+ * it takes inputString, the variable where we kept concatenating new input data from stdin, and it
+ * runs a replace() on it. We pass a RegExp to replace().
+ * 
+ * in the RegExp, the expression begins with / and ends with /. Everything between those two
+ * characters is the regular expression.
+ * 
+ * in the regular expression, \s finds a whitespace character.
+ * 
+ * n* matches any string that contains zero or more occurrences of n.
+ * 
+ * so, the regular expression is matching for zero or more occurrences of whitespace.
+ * 
+ * in the regular expression, $ signifies the end of input.
+ * 
+ * so, the regular expression is matching for zero or more occurrences of whitespace at the end of
+ * the input, and it replaces this value with '' (it effectively deletes the value).
  */
 process.stdin.on('end', _ => {
   inputString = inputString.replace(/\s*$/, '')
