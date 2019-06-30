@@ -157,6 +157,11 @@ function aVeryBigSum(ar) {
  * 
  * finally, result runs the function aVeryBigSum on the ar array. aVeryBigSum will take in an array
  * of numbers and return a sum of those numbers.
+ * 
+ * calling the end() method signals that no more data will be written to the writable stream (ws,
+ * in this case). The optional chunk and encoding arguments allow one final additional chunk of
+ * data to be written immediately before closing the stream. If provided, a callback function is
+ * attached as a listener for the 'finish' event.
  */
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
