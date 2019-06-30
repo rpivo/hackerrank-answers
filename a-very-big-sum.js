@@ -48,7 +48,8 @@ const fs = require('fs');
  * process.stdin.resume() to read from it. process.stdin.resume() is essentially the way you
  * unpause the stream reading.
  * 
- * so, process.stdin.resume(); allows us to constantly read the stdin file for any changes.
+ * so, process.stdin.resume(); allows us to constantly read the stdin file for any changes. it's a
+ * data connection that is constantly looking out for new data.
  */
 process.stdin.resume();
 // sets the encoding for accepted characters coming into stdin.
