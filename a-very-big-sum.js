@@ -158,6 +158,10 @@ function aVeryBigSum(ar) {
  * finally, result runs the function aVeryBigSum on the ar array. aVeryBigSum will take in an array
  * of numbers and return a sum of those numbers.
  * 
+ * the write() method writes some data to the stream, and calls the supplied callback once the data
+ * has been fully handled. If an error occurs, the callback may or may not be called with the error
+ * as its first argument. To reliably detect write errors, add a listener for the 'error' event.
+ * 
  * calling the end() method signals that no more data will be written to the writable stream (ws,
  * in this case). The optional chunk and encoding arguments allow one final additional chunk of
  * data to be written immediately before closing the stream. If provided, a callback function is
@@ -171,6 +175,8 @@ function main() {
   const ar = readLine().split(' ').map(arTemp => parseInt(arTemp, 10));
 
   let result = aVeryBigSum(ar);
+
+  ws.write(result + "\n");
 
   ws.end();
 }
