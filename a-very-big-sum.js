@@ -150,6 +150,10 @@ function aVeryBigSum(ar) {
  * 
  * arCount takes in the first integer typed. This represents a count of how many number values will
  * be in the second line of input.
+ * 
+ * ar is the second line of input. It calls readLine(), and the splits this string by spaces with
+ * split(' '), creating an array of values. Then, it does map() on this array, running a base-10
+ * parseInt() on each of the values, converting each of them from strings to numbers.
  */
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
