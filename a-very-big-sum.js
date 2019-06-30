@@ -154,6 +154,9 @@ function aVeryBigSum(ar) {
  * ar is the second line of input. It calls readLine(), and the splits this string by spaces with
  * split(' '), creating an array of values. Then, it does map() on this array, running a base-10
  * parseInt() on each of the values, converting each of them from strings to numbers.
+ * 
+ * finally, result runs the function aVeryBigSum on the ar array. aVeryBigSum will take in an array
+ * of numbers and return a sum of those numbers.
  */
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
