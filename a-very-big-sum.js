@@ -141,6 +141,9 @@ function a VeryBigSum(ar) {
  * 
  * the parseInt() function parses a string argument and returns an integer specified radix (the
  * base in mathematical numeral systems).
+ * 
+ * the first parameter passed into parseInt is the function readLine(), which reads an item in the
+ * inputString array at an initialized index variable and then increments that index.
  */
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
