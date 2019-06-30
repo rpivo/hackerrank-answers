@@ -124,6 +124,16 @@ function a VeryBigSum(ar) {
  * the path to the file the stream is writing to is specified in the first argument to
  * fs.createWriteStream(). If path is passed as a string, then writeStream.path will be a string. 
  * If path is passed as a Buffer, then writeStream.path will be a Buffer.
+ * 
+ * the function fs.createWriteStream() creates a writeable stream in a very simple manner. After a
+ * call to fs.createWriteStream() with the filepath, you have a writeable stream to work with. It
+ * turns out that the response (as well as the request) objects are streams.
+ * 
+ * the process.env global variable is injected by the Node at runtime for your application to use
+ * and it represents the state of the system environment your application is in when it starts. For
+ * example, if the system has a PATH variable set, this will be made accessible to you through
+ * process.env.PATH which you can use to check where binaries are located and make external calls
+ * to them if required.
  */
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
