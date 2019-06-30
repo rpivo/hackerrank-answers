@@ -138,6 +138,9 @@ function a VeryBigSum(ar) {
  * the process.env property returns an object containing the user environment.
  * 
  * so, ws is the variable we are storing th write the stdin stream to.
+ * 
+ * the parseInt() function parses a string argument and returns an integer specified radix (the
+ * base in mathematical numeral systems).
  */
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
