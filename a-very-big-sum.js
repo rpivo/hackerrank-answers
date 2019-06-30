@@ -144,6 +144,8 @@ function a VeryBigSum(ar) {
  * 
  * the first parameter passed into parseInt is the function readLine(), which reads an item in the
  * inputString array at an initialized index variable and then increments that index.
+ * 
+ * parseInt() takes this string that was read in and converts it into a base-10 number.
  */
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
