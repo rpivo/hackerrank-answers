@@ -34,7 +34,12 @@ const fs = require('fs');
  * 
  * the net module (as in the reference to net.Socket) provides an asynchronous network API for
  * creating stream-based TCP or ICP servers (net.createServer()) and clients
- * (net.createConnection()).
+ * (net.createConnection()). It can be accessed using:
+ * 
+ * const net = require('net');
+ * 
+ * The net module provides you with an asynchronous network wrapper. It contains methods for
+ * creating both servers and clients (called streams).
  * 
  * in "old" streams mode the stdin stream is paused by default, so one must call
  * process.stdin.resume() to read from it. process.stdin.resume() is essentially the way you
