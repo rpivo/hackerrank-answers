@@ -96,6 +96,8 @@ process.stdin.on('data', inputStdin => {
  * then, we run map() on each of these individual items within the array. For each one of these
  * items, we perform the same regular expression replacement on them, removing any whitespace at
  * the end of the string.
+ * 
+ * once that's complete, we run main().
  */
 process.stdin.on('end', _ => {
   inputString = inputString.replace(/\s*$/, '')
