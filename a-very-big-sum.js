@@ -116,8 +116,8 @@ function readLine() {
 }
 
 // Complete the aVeryBigSum function below
-function a VeryBigSum(ar) {
-
+function aVeryBigSum(ar) {
+  console.log('hello');
 }
 
 /*
@@ -145,7 +145,11 @@ function a VeryBigSum(ar) {
  * the first parameter passed into parseInt is the function readLine(), which reads an item in the
  * inputString array at an initialized index variable and then increments that index.
  * 
- * parseInt() takes this string that was read in and converts it into a base-10 number.
+ * parseInt() takes this string that was read in and converts it into a base-10 number. Then it
+ * stores this number into arCount.
+ * 
+ * arCount takes in the first integer typed. This represents a count of how many number values will
+ * be in the second line of input.
  */
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
