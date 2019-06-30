@@ -1,6 +1,6 @@
 /*
  * ES5 strict mode prevents the use of undeclared variables. All modern browsers support strict
- * mode except <IE10.
+ * mode except pre-IE10.
  */
 'use strict';
 
@@ -28,9 +28,13 @@ const fs = require('fs');
  * the process.stdin property returns a stream connected to stdin (fd 0). It is a net.Socket (which
  * is a Duplex stream) unless fd 0 refers to a file, in which case it is a Readable stream.
  * 
- * (fd 0) is about file descriptors. stdin and stderr get assigned a file descriptor. File
+ * (fd 0) is a file descriptor. stdin and stderr get assigned a file descriptor. File
  * descriptors represent a reference to an opened file. So, the process object has an event
  * listener that is constantly listening to the file descriptor fd 0, which is stdin.
+ * 
+ * the net module (as in the reference to net.Socket) provides an asynchronous network API for
+ * creating stream-based TCP or ICP servers (net.createServer()) and clients
+ * (net.createConnection()).
  * 
  * in "old" streams mode the stdin stream is paused by default, so one must call
  * process.stdin.resume() to read from it. process.stdin.resume() is essentially the way you
