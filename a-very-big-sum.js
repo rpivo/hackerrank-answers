@@ -117,7 +117,8 @@ function readLine() {
 
 // Complete the aVeryBigSum function below
 function aVeryBigSum(ar) {
-  console.log('hello');
+  let result = ar.reduce((previous, current) => previous + current, 0);
+  return(result);
 }
 
 /*
