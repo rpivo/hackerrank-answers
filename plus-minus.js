@@ -87,6 +87,10 @@ process.stdin.on('end', _ => {
   main();
 });
 
+/*
+ * using initialized local variables, returns a single item inside the inputString array. currentLine
+ * is incremented and then is used as the index value for the array inputString. 
+ */
 function readLine() {
   return inputString[currentLine++];
 }
