@@ -100,6 +100,28 @@ function plusMinus(arr) {
 
 }
 
+/* 
+ * the parseInt() function parses a string argument and returns an integer specified radix (the
+ * base in mathematical numeral systems).
+ * 
+ * the first parameter passed into parseInt is the function readLine(), which reads an item in the
+ * inputString array at an initialized index variable and then increments that index.
+ * 
+ * parseInt() takes this string that was read in and converts it into a base-10 number. Then it
+ * stores this number into n.
+ * 
+ * n takes in the first integer typed. This represents a count of how many number values will
+ * be in the second line of input.
+ * 
+ * arr is the second line of input. It calls readLine() and then splits this string by spaces with
+ * split(' '), creating an array of values. Then, it does map() on this array, running a base-10
+ * parseInt() on each of the values, converting each of them from strings to numbers.
+ * 
+ * finally, plusMinus gets called with the arr array as an argument. plusMinus will take in an array
+ * of numbers, count how many numbers exist in the array, divide these numbers into groups of 
+ * postive, negative and 0-value numbers, and figure out what percentage each of these groups takes
+ * up for the entirety of the array.
+ */
 function main() {
   const n = parseInt(readLine(), 10);
 
