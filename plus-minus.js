@@ -1,5 +1,14 @@
 'use strict';
 
+/*
+ * the process object is a global that provides information about, and control over, the current
+ * Node.js process. As a global, it is always available to Node.js applications without using
+ * require(). The process object is an instance of EventEmitter. it's constantly listening to the current
+ * Node process.
+ * 
+ * the process.stdin property returns a stream connected to stdin (fd 0). It is a net.Socket (which
+ * is a Duplex stream) unless fd 0 refers to a file, in which case it is a Readable stream.
+ */
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
 
