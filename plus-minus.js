@@ -8,6 +8,10 @@
  * 
  * the process.stdin property returns a stream connected to stdin (fd 0). It is a net.Socket (which
  * is a Duplex stream) unless fd 0 refers to a file, in which case it is a Readable stream.
+ * 
+ * (fd 0) is a file descriptor. stdin and stderr get assigned a file descriptor. File
+ * descriptors represent a reference to an opened file. So, the process object has an event
+ * listener that is constantly listening to the file descriptor fd 0, which is stdin.
  */
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
