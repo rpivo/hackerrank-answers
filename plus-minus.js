@@ -97,7 +97,15 @@ function readLine() {
 
 // Complete the plusMinus function below.
 function plusMinus(arr) {
-
+  let positive = [];
+  let negative = [];
+  let zero     = [];
+  arr.forEach((number) => {
+    number < 0 ? negative.push(number) :
+    number > 0 ? positive.push(number) :
+    zero.push(number);
+  });
+  console.log(`${positive.length / arr.length}\n${negative.length / arr.length}\n${zero.length / arr.length}`);
 }
 
 /* 
