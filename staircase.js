@@ -1,3 +1,7 @@
+/*
+ * ES5 strict mode prevents the use of undeclared variables. All modern browsers support strict
+ * mode except pre-IE10.
+ */
 'use strict';
 
 process.stdin.resume();
