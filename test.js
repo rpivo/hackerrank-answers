@@ -1,12 +1,21 @@
-function staircase(n) {
-  let returnString = '';
-  let space = ' ';
-  let hashtag = '#';
-  for(i = n; i > 0; i--) {
-    returnString += `${space.repeat(i - 1)}${hashtag.repeat(n - (i - 1))}`;
-    i > 1 && (returnString += `\n`);
-  }
-  return returnString;
+array = [3, 4, 21, 36, 10, 28, 35, 5, 24, 42];
+
+function breakingRecords(scores) {
+  let high, low;
+  let highRecord = -1;
+  let lowRecord = -1;
+  scores.forEach((score) => {
+    if (score > high || high === undefined) {
+      high = score;
+      highRecord++;
+    }
+    if (score < low || low === undefined) {
+      low = score;
+      lowRecord++;
+    }
+  });
+  let records = [highRecord, lowRecord];
+  return records;
 }
 
-console.log(staircase(5));
+breakingRecords(array);
