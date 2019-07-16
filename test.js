@@ -1,21 +1,13 @@
-array = [3, 4, 21, 36, 10, 28, 35, 5, 24, 42];
+const height = [1, 2, 3, 4, 5];
+const k = 3;
 
-function breakingRecords(scores) {
-  let high, low;
-  let highRecord = -1;
-  let lowRecord = -1;
-  scores.forEach((score) => {
-    if (score > high || high === undefined) {
-      high = score;
-      highRecord++;
-    }
-    if (score < low || low === undefined) {
-      low = score;
-      lowRecord++;
-    }
-  });
-  let records = [highRecord, lowRecord];
-  return records;
+function hurdleRace(k, height) {
+  let heighest = Math.max.apply(null, height);
+  if ((heighest - k) > 0) {
+    return (heighest - k);
+  } else {
+    return 0;
+  }
 }
 
-breakingRecords(array);
+hurdleRace(k, height);
