@@ -1,11 +1,10 @@
-function viralAdvertising(n) {
-  let shared = 5;
-  let liked = 0;
-  for (let index = 1; index < n + 1; index++) {
-    liked += Math.floor(shared / 2);
-    shared = (Math.floor(shared / 2) * 3);
-  }
-  console.log(liked);
+function introTutorial(V, arr) {
+  // console.log(arr.findIndex(V));
+  console.log(arr.indexOf(V));
 }
 
-viralAdvertising(5); 
+const number = 4;
+
+const numbers = [1, 4, 5, 7, 9, 12];
+
+introTutorial(number, numbers);
