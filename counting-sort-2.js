@@ -3,9 +3,7 @@ const countingSort = (arr, j = 0) => {
   const max = Math.max(...arr);
   let count = new Array((max - min) + 1).fill(0);
   arr = arr.map(item => item - min);
-  for (let i = 0; i < arr.length; i++) {
-    count[arr[i]] += 1;
-  }
+  for (let i = 0; i < arr.length; i++) count[arr[i]] += 1;
   for (let i = 0; i <= (max - min); i++) {
     while (count[i] > 0) {
       arr[j++] = i;
