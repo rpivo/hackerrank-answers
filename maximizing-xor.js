@@ -4,6 +4,7 @@ function maximizingXor(l, r, max = 0, xor) {
     for (let j = l; j <= r; j++) {
       xor = i ^ j;
       if (xor > max) max = xor;
+      max = Math.max(max, xor);
     }
     l++;
   }
