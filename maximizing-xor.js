@@ -3,7 +3,6 @@ function maximizingXor(l, r, max = 0, xor) {
   for (let i = l; i <= r; i++) {
     for (let j = l; j <= r; j++) {
       xor = i ^ j;
-      if (xor > max) max = xor;
       max = Math.max(max, xor);
     }
     l++;
